@@ -3,8 +3,8 @@
   "short_name": "bookmarkdupes",
   "description": "__MSG_extensionDescription__",
   "author": "Martin Väth",
-  "version": "6.6",
-  "manifest_version": 2,
+  "version": "6.7",
+  "manifest_version": 3,
   "homepage_url": "https://github.com/vaeth/bookmarkdupes/",
   "default_locale": "en",
 
@@ -19,7 +19,7 @@
     ]
   },
 
-  "browser_action": {
+  "action": {
     "default_icon": {
       "16": "data/icons/48.svg",
       "19": "data/icons/48.svg",
@@ -32,13 +32,11 @@
       "64": "data/icons/48.svg",
       "96": "data/icons/48.svg",
       "128": "data/icons/48.svg"
-    },
-    "browser_style": true
+    }
   },
 
   "options_ui": {
-    "page": "data/options/index.html",
-    "browser_style": true
+    "page": "data/options/index.html"
   },
 
   "icons": {
@@ -55,10 +53,9 @@
     "128": "data/icons/48.svg"
   },
 
-  "applications": {
+  "browser_specific_settings": {
     "gecko": {
-      "id": "bookmarkdupes@martin-vaeth.org",
-      "strict_min_version": "57.0"
+      "id": "bookmarkdupes@martin-vaeth.org"
     }
   }
 }
