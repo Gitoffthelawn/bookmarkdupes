@@ -1,5 +1,9 @@
 # ChangeLog for bookmarkdupes
 
+*bookmarkdupes-6.7:
+	Martin Väth <martin at mvath.de>:
+	- Make CheckboxStateChange work on new browsers (use change event)
+
 *bookmarkdupes-6.6:
 	Sopor:
 	- Create ar sv_SE locales
