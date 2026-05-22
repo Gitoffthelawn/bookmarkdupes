@@ -1,8 +1,11 @@
 # ChangeLog for bookmarkdupes
 
+*bookmarkdupes-6.7.1:
+	atik4242:
+	- Keep CheckboxStateChange as a fallback
+
 *bookmarkdupes-6.7:
 	Martin Väth <martin at mvath.de>:
-	- Keep CheckboxStateChange as fallback for expert mode activation
 	- Make CheckboxStateChange work on new browsers (use change event)
 
 *bookmarkdupes-6.6:
