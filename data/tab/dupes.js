@@ -2662,6 +2662,7 @@ function initMain() {
   }
   addButtonsBase();
   document.addEventListener("change", checkboxListener);
+  document.addEventListener("CheckboxStateChange", checkboxListener);
   document.addEventListener("click", clickListener);
   document.addEventListener("change", changeListener);
   compatible.browser.storage.onChanged.addListener(storageListener);
