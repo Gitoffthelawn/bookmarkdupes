@@ -2433,6 +2433,26 @@ function initMain() {
     }
   }
 
+  let lastCheckboxEvent;
+
+  function checkboxListenerOnce(event) {
+    if (event.target && event.target.type === "checkbox") {
+      const now = Date.now();
+      if (lastCheckboxEvent
+          && (lastCheckboxEvent.target === event.target)
+          && (lastCheckboxEvent.checked === event.target.checked)
+          && ((now - lastCheckboxEvent.time) < 50)) {
+        return;
+      }
+      lastCheckboxEvent = {
+        target: event.target,
+        checked: event.target.checked,
+        time: now
+      };
+    }
+    checkboxListener(event);
+  }
+
   function checkboxListener(event) {
     if (!event.target || !event.target.id) {
       return;
@@ -2661,8 +2681,8 @@ function initMain() {
     return;
   }
   addButtonsBase();
-  document.addEventListener("change", checkboxListener);
-  document.addEventListener("CheckboxStateChange", checkboxListener);
+  document.addEventListener("change", checkboxListenerOnce);
+  document.addEventListener("CheckboxStateChange", checkboxListenerOnce);
   document.addEventListener("click", clickListener);
   document.addEventListener("change", changeListener);
   compatible.browser.storage.onChanged.addListener(storageListener);
