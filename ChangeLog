@@ -1,8 +1,12 @@
 # ChangeLog for bookmarkdupes
 
+*bookmarkdupes-6.7.2:
+	atik4242:
+	- Guard against duplicate events (of CheckboxStateChange and change)
+
 *bookmarkdupes-6.7.1:
 	atik4242:
-	- Keep CheckboxStateChange as a fallback, guarding against duplicate events
+	- Keep CheckboxStateChange as a fallback.
 
 *bookmarkdupes-6.7:
 	Martin Väth <martin at mvath.de>:
